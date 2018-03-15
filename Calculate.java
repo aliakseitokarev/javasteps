@@ -1,3 +1,7 @@
+/**
+ * Класс для вычисления арифмитических операций двух чисел. Числа беруться из входщего массива.
+ */
+
 public class Calculate {
 	
 	public static void main(String[] arg){
