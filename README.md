@@ -1,3 +1,2 @@
 # javasteps
-java steps
-Делаю калькулятор
+Research calculator....
