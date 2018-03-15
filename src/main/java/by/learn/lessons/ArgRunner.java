@@ -13,7 +13,7 @@ public class ArgRunner {
 			calc.add(first, second);
 			System.out.println("Sum : " + calc.getResult());
 		} else {
-			System.out.println("Enter two paramenters.");
+			System.out.println("Enter two parameters!");
 		}
 	}
 }
