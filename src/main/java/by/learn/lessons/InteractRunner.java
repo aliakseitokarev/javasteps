@@ -20,16 +20,16 @@ public class InteractRunner {
                     first = Double.valueOf(reader.next()); //первый аргумент из консоли
                 }
                 System.out.println ("Enter second arg : ");
-                double second = Double.valueOf(reader.next()); //второй аргумент из консоли
+                double  second = Double.valueOf(reader.next()); //второй аргумент из консоли
 
                 //System.out.println ("Enter required operation (add, subt, mult, div) : ");
-                //String choice = reader.next();
+                //String choice =  reader.next();
                 //
 
 
 
                 /**
-                 * сделать проверку вводимого значения требуемой операции - пока
+                 * сделать проверку   вводимого значения требуемой операции - пока
                  * не знаю как (либо считать последнее сообщение из консоли либо
                  * либо как-то еще
                  */

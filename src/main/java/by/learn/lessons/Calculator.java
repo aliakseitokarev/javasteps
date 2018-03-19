@@ -63,7 +63,7 @@ public class Calculator {
 
     public static String getOperation () {
         Scanner reader = new Scanner(System.in);
-        System.out.println("Enter required operation (add, subt, mult, div) : ");
+        System.out.println(" Enter required operation (add, subt, mult, div) : ");
         String choice = reader.next();
         return choice;
     }
