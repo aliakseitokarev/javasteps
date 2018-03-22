@@ -5,7 +5,7 @@ package by.learn.lessons.Clinic;
  */
 public class ClinicRunner {
 
-    public static void main(String[] arg) {
+    public static void main(String[] args) {
         final Clinic clinic = new Clinic(10);
 
         clinic.addClient(0, new Client("Brown", new Cat("Digy")));

@@ -4,11 +4,11 @@ package by.learn.lessons;
  */
 public class ArgRunner {
 
-	public static void main(String[] arg) {
+	public static void main(String[] args) {
 		System.out.println("Calculate...");
-		if (arg.length == 2) {
-			int first = Integer.valueOf(arg[0]);
-			int second = Integer.valueOf(arg[1]);
+		if (args.length == 2) {
+			int first = Integer.valueOf(args[0]);
+			int second = Integer.valueOf(args[1]);
 			Calculator calc = new Calculator();
 			calc.add(first, second);
 			System.out.println("Sum : " + calc.getResult());
