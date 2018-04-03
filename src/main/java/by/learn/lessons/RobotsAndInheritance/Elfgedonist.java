@@ -84,9 +84,7 @@ public class Elfgedonist {
                 array[j][d-i-1] = count;
                 count++;
             }
-            for (int j = 0; j < ; j++) {
-                
-            }
+
         }
 
     }

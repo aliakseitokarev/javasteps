@@ -8,7 +8,7 @@ public class Clinic {
     /**
      * список клиентов
      */
-    private final Client[] clients;
+    final Client[] clients;
 
     public  Clinic(final int size){
         this.clients = new Client[size];
@@ -22,6 +22,11 @@ public class Clinic {
     public void addClient(final int position, final Client client) {
         this.clients[position] = client;
     }
+    public String clientName(final int i){
+        return this.clients[i].getId();
+    }
+
+
 
     public Client[] findClientsByPetName (final String name){
         // реализовать
