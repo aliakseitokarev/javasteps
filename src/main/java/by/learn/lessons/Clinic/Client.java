@@ -24,6 +24,7 @@ public class Client {
         return pet.getClass().getSimpleName();
     }
 
+    //возвращает имя питомца
     public String getPetName(){
         return pet.getPetName();
     }

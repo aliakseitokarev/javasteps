@@ -29,7 +29,17 @@ public class Clinic {
 
 
     public Client[] findClientsByPetName (final String name){
-        // реализовать
-        return new Client[]{};
+
+        Client[] findPetName = new Client[this.clients.length];
+        int count = 0;
+        for (Client client :clients){
+            if ((client != null) && (client.getPetName().toLowerCase().equals(name.toLowerCase()))) {
+                findPetName[count] = client;
+                count++;
+            }
+        }
+        if (count == 0)
+        System.out.println("Не найдено совпадений");
+        return findPetName;
     }
 }
