@@ -13,7 +13,7 @@ public class CalculatorTest {
     public void add() throws Exception {
         Calculator calculator = new Calculator();
         calculator.add(1, 1);
-        assertEquals(1, calculator.getResult(),0);
+        assertEquals(2, calculator.getResult());
 
 
     }
