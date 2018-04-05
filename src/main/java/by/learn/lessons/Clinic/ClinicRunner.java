@@ -6,9 +6,10 @@ package by.learn.lessons.Clinic;
 public class ClinicRunner {
 
     public static void main(String[] args) {
-        final Clinic doctorVet = new Clinic(10);
+        final Clinic doctorVet = new Clinic(2);
         Console console = new Console();
         printer(console.addClinicData(doctorVet));
+        printer(doctorVet.findClientsByPetName("benya"));
 
 
 
@@ -30,7 +31,7 @@ public class ClinicRunner {
     public static void printer (Client[] anyResult) {
 
         for (Client i : anyResult) {
-            if (i != null) System.out.println(i.getId());
+            if (i != null) System.out.println(i.getPetName());
         }
     }
 }

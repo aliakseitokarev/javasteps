@@ -3,20 +3,19 @@ package by.learn.lessons.Clinic.Pets;
 
 public class Dog implements Pet{
 
-     final Pet pet;
+     final String name;
 
-    public Dog(final Pet pet) {
-        this.pet = pet;
+    public Dog(final String name) {
+        this.name = name;
     }
 
     @Override
     public String getPetName() {
-        return this.pet.getPetName();
+        return this.name;
     }
 
     @Override
     public void makeSound() {
-        this.pet.makeSound();
         System.out.println("Gav, Gav");
     }
 }

@@ -1,5 +1,5 @@
 
-package by.learn.lessons;
+package by.learn.lessons.Calculator;
 /**
  * Класс для вычисления суммы двух чисел. Числа берутся из входящего массива.
  */

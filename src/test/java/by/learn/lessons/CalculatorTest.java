@@ -1,6 +1,6 @@
 package by.learn.lessons;
 
-import org.junit.Assert;
+import by.learn.lessons.Calculator.Calculator;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;

@@ -30,16 +30,26 @@ public class Clinic {
 
     public Client[] findClientsByPetName (final String name){
 
-        Client[] findPetName = new Client[this.clients.length];
         int count = 0;
-        for (Client client :clients){
-            if ((client != null) && (client.getPetName().toLowerCase().equals(name.toLowerCase()))) {
-                findPetName[count] = client;
-                count++;
-            }
+        for (Client client : clients) {   //определеям количество реальных клиентов в клинике
+            if (client != null) count++;
         }
-        if (count == 0)
-        System.out.println("Не найдено совпадений");
-        return findPetName;
+        if (count != 0) {
+            Client[] findClient = new Client[count]; //создаем новый массив вывода результатов поиска
+
+            for (Client client : clients){
+                if ((client != null) && (client.getPetName().equalsIgnoreCase(name))) {
+                    findClient[count] = client;
+                    count++;
+                }
+            }
+            if (count == 0)
+                System.out.println("Не найдено совпадений");
+
+            return findClient;
+        }
+        System.out.println("В клинике нет клиентов");
+
+        return null;
     }
 }

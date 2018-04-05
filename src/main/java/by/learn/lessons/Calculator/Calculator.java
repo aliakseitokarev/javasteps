@@ -1,4 +1,4 @@
-package by.learn.lessons;
+package by.learn.lessons.Calculator;
 
 import java.util.Scanner;
 
