@@ -1,8 +1,4 @@
 package by.learn.lessons.Clinic;
-import by.learn.lessons.Clinic.Pets.*;
-
-
-import java.util.Arrays;
 
 /**
  * Created by user on 20.03.2018. Работа клиники
@@ -10,10 +6,9 @@ import java.util.Arrays;
 public class ClinicRunner {
 
     public static void main(String[] args) {
-        final Clinic petClinic = new Clinic(10);
-        ConsoleRunner consoleRunner = new ConsoleRunner(10);
-        consoleRunner.inputData();
-        printer(consoleRunner.clinics);
+        final Clinic doctorVet = new Clinic(10);
+        Console console = new Console();
+        printer(console.addClinicData(doctorVet));
 
 
 
