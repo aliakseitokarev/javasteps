@@ -8,4 +8,6 @@ public interface Pet {
     void makeSound(); //издать звук
 
     String getPetName(); //имя питомца
+
+    void setName(String name); // назвать питомца
 }

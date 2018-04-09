@@ -3,7 +3,7 @@ package by.learn.lessons.Clinic.Pets;
 
 public class Dog implements Pet{
 
-     final String name;
+     private String name;
 
     public Dog(final String name) {
         this.name = name;
@@ -17,5 +17,10 @@ public class Dog implements Pet{
     @Override
     public void makeSound() {
         System.out.println("Gav, Gav");
+    }
+
+    @Override
+    public void setName(String name) {
+        this.name = name;
     }
 }

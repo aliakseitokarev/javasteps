@@ -10,46 +10,88 @@ public class Clinic {
      */
     final Client[] clients;
 
-    public  Clinic(final int size){
+    public Clinic(final int size) {
         this.clients = new Client[size];
     }
 
     /**
      * добавить клиента
+     *
      * @param position позиция в списке
-     * @param client человек использующий клинику
+     * @param client   человек использующий клинику
      */
     public void addClient(final int position, final Client client) {
         this.clients[position] = client;
     }
-    public String clientName(final int i){
-        return this.clients[i].getId();
-    }
 
+    public Client[] findClientsByName(final String id) { // искать клиента по имени
 
-
-    public Client[] findClientsByPetName (final String name){
-
-        int count = 0;
-        for (Client client : clients) {   //определеям количество реальных клиентов в клинике
-            if (client != null) count++;
-        }
-        if (count != 0) {
-            Client[] findClient = new Client[count]; //создаем новый массив вывода результатов поиска
-
-            for (Client client : clients){
-                if ((client != null) && (client.getPetName().equalsIgnoreCase(name))) {
-                    findClient[count] = client;
-                    count++;
-                }
+        Client[] clientsById = new Client[countClientsName()]; //создаем новый массив вывода результатов поиска
+        int i = 0;
+        for (Client client : this.clients) {
+            if ((client != null) && (client.getId().equalsIgnoreCase(id))) {
+                clientsById[i] = client;
+                i++;
             }
-            if (count == 0)
-                System.out.println("Не найдено совпадений");
-
-            return findClient;
         }
-        System.out.println("В клинике нет клиентов");
-
-        return null;
+        if (i == 0)
+            System.out.println("Не найдено совпадений");
+        return clientsById;
     }
+
+
+    public Client[] findClientsByPetName(final String name) { // искать клиента по кличке питомца
+
+        Client[] clientsByName = new Client[countClientsName()]; //создаем новый массив вывода результатов поиска
+        int i = 0;
+        for (Client client : this.clients) {
+            if ((client != null) && (client.getPetName().equalsIgnoreCase(name))) {
+                clientsByName[i] = client;
+                i++;
+            }
+        }
+        if (i == 0)
+            System.out.println("Не найдено совпадений");
+        return clientsByName;
+    }
+
+
+    private int countClientsName() {
+        int i = 0;
+        for (Client client : clients) {   //определеям количество реальных клиентов в клинике
+            if (client != null) i++;
+        }
+        if (i == 0) {
+            System.out.println("В клинике нет клиентов");
+            System.exit(0);               // выход из программы
+        }
+        return i;
+    }
+
+    public void editClientId(String id, String nextId) {
+        int changedClient = 0;
+        for (int i = 0; i < clients.length; i++) {
+            if (clients[i]!=null && clients[i].getId().equalsIgnoreCase(id)) {
+                clients[i].setId(nextId);
+                changedClient++;
+            }
+        }
+        if (changedClient == 0) System.out.println("Нет клиента с таким именем");
+    }
+
+    public void editPetName (String name, String nextPetname) {
+        int changedPetName = 0;
+        for (int i = 0; i < clients.length; i++) {
+            if (clients[i]!=null && clients[i].getPetName().equalsIgnoreCase(name)) {
+                clients[i].setPetName (nextPetname);
+                changedPetName++;
+            }
+        }
+        if (changedPetName == 0) System.out.println("Нет питомца с такой кличкой");
+    }
+
+    public void dellClient (String id) {
+
+    }
+
 }

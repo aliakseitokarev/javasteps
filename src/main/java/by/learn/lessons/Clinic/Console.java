@@ -1,4 +1,5 @@
 package by.learn.lessons.Clinic;
+
 import by.learn.lessons.Clinic.Pets.*;
 
 import java.util.Scanner;
@@ -11,11 +12,11 @@ public class Console {
     /*
         добавляет в клинику клиентов (на вход - клинику, на выход - массив клиентов)
      */
-    public Client [] addClinicData(Clinic clinic) {
+    public Client[] addClinicData(Clinic clinic) {
         int count = 0;
         String exit = "no";
         try {
-            while (!exit.equalsIgnoreCase("yes") && count <= clinic.clients.length-1) { //проверка на превышение количества клиентов клиники
+            while (!exit.equalsIgnoreCase("yes") && count <= clinic.clients.length - 1) { //проверка на превышение предустановленного количества возможных клиентов клиники
 
                 System.out.println("Введите имя клиента");
                 String id = reader.next();
@@ -36,19 +37,19 @@ public class Console {
                     if (petType.equalsIgnoreCase("dog")) {
                         clinic.addClient(count, new Client(id, new Dog(name)));
                         count++;
-                    }else {
+                    } else {
                         clinic.addClient(count, new Client(id, new CatDog(new Cat(name), new Dog(name))));
                         count++;
                     }
                 }
-                if (count <= clinic.clients.length-1) {   //не выводим если превышено количество клиентов
+                if (count <= clinic.clients.length - 1) {   //не выводим если превышено предустановленное количество возможных клиентов
                     System.out.println("Exit : yes/no");
                     exit = reader.next();
                 }
 
             }
 
-        }finally {reader.close();} //закрываем ридер
+        } finally {reader.close();} //закрываем ридер
         return clinic.clients;
     }
 

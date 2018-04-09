@@ -4,8 +4,8 @@ package by.learn.lessons.Clinic.Pets;
  * Created by user on 03.04.2018.
  */
 public class CatDog implements Pet{
-    private final Pet cat;
-    private final Pet dog;
+    private  final Pet cat;
+    private  final Pet dog;
 
     public CatDog(Pet cat, Pet dog) {
         this.cat = cat;
@@ -21,5 +21,11 @@ public class CatDog implements Pet{
     @Override
     public String getPetName() {
         return String.format("%s-%s", this.cat.getPetName(), this.dog.getPetName());
+    }
+
+    @Override
+    public void setName(String name) {
+       this.cat.setName(name);
+       this.dog.setName(name);
     }
 }

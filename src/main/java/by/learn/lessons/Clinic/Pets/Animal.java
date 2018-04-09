@@ -4,7 +4,7 @@ package by.learn.lessons.Clinic.Pets;
  * создаем класс животного
  */
 public class Animal implements Pet {
-     final String name;
+     private String name;
 
     public Animal(final String name) {
         this.name = name;
@@ -18,5 +18,10 @@ public class Animal implements Pet {
     @Override
     public String getPetName() {
         return this.name;
+    }
+
+    @Override
+    public void setName(String name) {
+        this.name = name;
     }
 }
